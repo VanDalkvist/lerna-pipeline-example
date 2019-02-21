@@ -1,0 +1,10 @@
+{
+  "name": "package1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}

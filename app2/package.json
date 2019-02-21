@@ -1,0 +1,14 @@
+{
+  "name": "app2",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "package1": "1.0.0"
+  },
+  "scripts": {
+    "build": "echo build"
+  },
+  "devDependencies": {
+    "tape": "^4.10.1"
+  }
+}

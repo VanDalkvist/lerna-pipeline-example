@@ -1,0 +1,30 @@
+{
+  "name": "client-apps",
+  "version": "1.0.0",
+  "description": "The root repository. This is monorepo configured with lerna.",
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean --yes",
+    "reboot": "npm run clean && npm run bootstrap",
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "lerna": "3.1.4",
+    "npm": "6.4.0",
+    "prettier": "^1.14.2"
+  },
+  "prettier": {
+    "tabWidth": 4,
+    "jsxBracketSameLine": false,
+    "proseWrap": "preserve"
+  },
+  "build": {
+    "pipeline": [
+      "run-app-build"
+    ],
+    "apps": [
+      "app1",
+      "app2"
+    ]
+  }
+}
