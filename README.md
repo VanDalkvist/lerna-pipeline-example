@@ -1,2 +1,3 @@
 # lerna-pipeline
-Building lerna pipeline for configured apps
+
+Example provides structure of building lerna monorepository pipeline for configured apps with packages
