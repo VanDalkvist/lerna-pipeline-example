@@ -20,7 +20,11 @@
   },
   "build": {
     "pipeline": [
-      "run-app-build"
+      "run-npm-tasks-parallel:build",
+      "build-plugins"
+    ],
+    "plugins": [
+      "build-cshtml"
     ],
     "apps": [
       "app1",

@@ -19,11 +19,10 @@ async function _build(appName) {
 }
 
 function _writeMainView(appName, assetsManifest, resolve, reject) {
-    const templatePath = path.resolve("./", appName, "public", mainViewName);
-    // console.debug("templatePath: ", templatePath);
+    console.debug(`Building ${mainViewName}... `);
 
+    const templatePath = path.resolve("./", appName, "public", mainViewName);
     const buildPath = path.resolve("./", appName, "build", mainViewName);
-    // console.debug("buildPath: ", buildPath);
 
     fs.readFile(templatePath, "utf-8", (err, indexCshtmlTemplate) => {
         if (err) return reject(err);
@@ -35,6 +34,7 @@ function _writeMainView(appName, assetsManifest, resolve, reject) {
         fs.writeFile(buildPath, builtMainView, "utf-8", (err, res) => {
             if (err) return reject(err);
 
+            console.debug(`Built ${mainViewName} assets.`);
             resolve(res);
         });
     });
